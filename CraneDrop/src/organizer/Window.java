@@ -81,12 +81,11 @@ public class Window extends Canvas {
 	
 	public static class ActionTwo implements ActionListener {
 		
+		Ball ball;
+		
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			
-			if (e.getSource() == button2) {
-			    Window.value = true;
-			}
+			System.out.println("True");
 		}
 	}
 	
@@ -94,7 +93,7 @@ public class Window extends Canvas {
 		
 		Random rand = new Random();
 		
-		int subNumber = rand.nextInt(4) + 1;
+		int subNumber = rand.nextInt(5) + 1;
 		
 		number = subNumber;
 		

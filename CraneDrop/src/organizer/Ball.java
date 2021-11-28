@@ -15,8 +15,14 @@ public class Ball extends CraneObject {
 	public Ball(int x, int y, Type type) {
 		
 		super(x, y, type);
-			
-		speedY = Window.number;
+		
+		speedY = 0;
+		/**
+		if () {
+			speedY = Window.number;
+		}
+		*/
+		
 	}
 	
 	public int randomInteger() {
@@ -27,6 +33,10 @@ public class Ball extends CraneObject {
 		
 		return number;
 
+	}
+	
+	public void setSpeedY(int number) {
+		this.speedY = number;
 	}
 	
 	public Rectangle getBounds() {

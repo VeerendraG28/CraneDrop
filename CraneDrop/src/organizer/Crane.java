@@ -29,7 +29,7 @@ public class Crane extends Canvas implements Runnable {
 		controller = new Controller();
 				
 		controller.addObject(new Player(311, 433, Type.Player, controller, ball));
-		controller.addObject(new Ball(311, 33, Type.Ball));
+		controller.addObject(new Ball(312, 33, Type.Ball));
 		controller.addObject(new CraneStructure(319, 0,Type.CraneStructure));
 
 	}

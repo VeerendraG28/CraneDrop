@@ -7,9 +7,7 @@ import java.awt.Rectangle;
 public class CraneStructure extends CraneObject {
 	public CraneStructure(int x, int y, Type type) {
 		super(x, y, type);
-	
-		//speedX = 2;
-		
+			
 	}
 
 	@Override
@@ -22,12 +20,12 @@ public class CraneStructure extends CraneObject {
 	@Override
 	public void render(Graphics graphic) {
 		graphic.setColor(Color.white);
-		graphic.fillRect(x, y, 4, 33);
+		graphic.fillRect(x, y, 6, 33);
 		
 	}
 
 	@Override
 	public Rectangle getBounds() {
-		return new Rectangle(x, y, 4, 33);
+		return new Rectangle(x, y, 6, 33);
 	}
 }
