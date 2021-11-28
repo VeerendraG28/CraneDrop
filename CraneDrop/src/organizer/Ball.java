@@ -9,12 +9,14 @@ import java.util.Random;
 import javax.swing.JOptionPane;
 
 public class Ball extends CraneObject {
+	
+	Window window;
 		
 	public Ball(int x, int y, Type type) {
 		
 		super(x, y, type);
-		
-		speedY = randomInteger();
+			
+		speedY = Window.number;
 	}
 	
 	public int randomInteger() {
@@ -24,6 +26,7 @@ public class Ball extends CraneObject {
 		int number = rand.nextInt(4) + 1;
 		
 		return number;
+
 	}
 	
 	public Rectangle getBounds() {
@@ -35,7 +38,7 @@ public class Ball extends CraneObject {
 		x += speedX;
 		y += speedY;
 		
-		if (y <= 0 || y >= Crane.HEIGHT - 53) {
+		if (y <= 0 || y >= Crane.HEIGHT - 60) {
 			JOptionPane.showMessageDialog(null, "You missed the target", null, JOptionPane.INFORMATION_MESSAGE);
 			System.exit(0);
 		}

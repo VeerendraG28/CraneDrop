@@ -23,8 +23,8 @@ public class Window extends Canvas {
 	
 	static boolean value = false;
 	
-	private static Random random = new Random();
-
+	public static int number;
+		
 	public Window(int width, int height, String title, Crane crane) {
 		JFrame frame = new JFrame(title);
 		
@@ -39,14 +39,16 @@ public class Window extends Canvas {
 		
 		JButton button = new JButton("Instructions");
 		button.setSize(100,30);
-		button.setBackground(Color.magenta);
+		button.setBackground(Color.cyan);
 		button.setVisible(true);
 		frame.add(button);
 		button.addActionListener(new Action());
-				
-		button2 = new JButton("" + randomInteger());
+		
+		number = subNumber();
+		
+		button2 = new JButton("" + number);
 		button2.setSize(100,30);
-		button2.setBackground(Color.white);
+		button2.setBackground(Color.green);
 		button2.setVisible(true);
 		button2.setBounds(580, 0, 50, 45);
 		frame.add(button2);
@@ -67,7 +69,7 @@ public class Window extends Canvas {
 			frame2.setVisible(true);
 			frame2.setSize(900,85);
 			JLabel label = new JLabel("Welcome to CraneDrop!");
-			JLabel label2 = new JLabel("There on the top right of your screen, you will see a white button which serves to eject the ball from the craned structure.");
+			JLabel label2 = new JLabel("There on the top right of your screen, you will see a light green button which serves to eject the ball from the craned structure.");
 			JLabel label3 = new JLabel("Your goal is to time the ball to hit the sliding target with the given speed which can range from 1-5. Good Luck!");
 			JPanel panel = new JPanel();
 			frame2.add(panel);
@@ -88,10 +90,15 @@ public class Window extends Canvas {
 		}
 	}
 	
-	
-	public static int randomInteger() {
-	
-		return random.nextInt(4) + 1;
+	public static int subNumber() {
+		
+		Random rand = new Random();
+		
+		int subNumber = rand.nextInt(4) + 1;
+		
+		number = subNumber;
+		
+		return number;
 	}
-
+	
 }
