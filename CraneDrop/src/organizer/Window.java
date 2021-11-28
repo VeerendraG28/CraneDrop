@@ -51,8 +51,7 @@ public class Window extends Canvas {
 		button2.setBounds(580, 0, 50, 45);
 		frame.add(button2);
 		button2.addActionListener(new ActionTwo());
-		System.out.println(Window.value);
-				
+						
 		frame.setResizable(false);
 		frame.setLocationRelativeTo(null);
 		frame.add(crane);

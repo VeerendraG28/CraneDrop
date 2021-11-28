@@ -1,6 +1,7 @@
 package organizer;
 
 import java.awt.Graphics;
+import java.awt.Rectangle;
 
 /**
  * 
@@ -33,6 +34,7 @@ public abstract class CraneObject {
 	
 	public abstract void tick();
 	public abstract void render(Graphics graphic);
+	public abstract Rectangle getBounds();
 	
 	public void setX(int x) {
 		this.x = x;

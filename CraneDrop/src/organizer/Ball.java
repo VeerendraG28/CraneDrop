@@ -1,8 +1,12 @@
 package organizer;
 
 import java.awt.Color;
+
 import java.awt.Graphics;
+import java.awt.Rectangle;
 import java.util.Random;
+
+import javax.swing.JOptionPane;
 
 public class Ball extends CraneObject {
 		
@@ -10,12 +14,7 @@ public class Ball extends CraneObject {
 		
 		super(x, y, type);
 		
-		if (Window.value == true) {
-			speedY = randomInteger();
-		}
-		else {
-			speedY = 0;
-		}
+		speedY = randomInteger();
 	}
 	
 	public int randomInteger() {
@@ -27,18 +26,27 @@ public class Ball extends CraneObject {
 		return number;
 	}
 	
+	public Rectangle getBounds() {
+		return new Rectangle(x, y, 10, 20);
+	}
+	
 	@Override
 	public void tick() {
 		x += speedX;
 		y += speedY;
-
+		
+		if (y <= 0 || y >= Crane.HEIGHT - 53) {
+			JOptionPane.showMessageDialog(null, "You missed the target", null, JOptionPane.INFORMATION_MESSAGE);
+			System.exit(0);
+		}
+	
 	}
 	
-
 	@Override
 	public void render(Graphics graphic) {
+
 		graphic.setColor(Color.red);
-		graphic.fillOval(x, y, 20, 20);
+		graphic.fillRect(x, y, 20, 30);
 		
 	}
 }
