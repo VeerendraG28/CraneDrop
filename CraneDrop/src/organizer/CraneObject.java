@@ -44,11 +44,11 @@ public abstract class CraneObject {
 		this.y = y;
 	}
 	
-	public int getX(int x) {
+	public int getX() {
 		return x;
 	}
 	
-	public int getY(int y) {
+	public int getY() {
 		return y;
 	}
 	
@@ -64,7 +64,7 @@ public abstract class CraneObject {
 		this.speedX = speedX;
 	}
 	
-	public int getSpeedX(int speedX) {
+	public int getSpeedX() {
 		return speedX;
 	}
 	
@@ -72,7 +72,7 @@ public abstract class CraneObject {
 		this.speedY = speedY;
 	}
 	
-	public int getSpeedY(int speedY) {
+	public int getSpeedY() {
 		return speedY;
 	}
 

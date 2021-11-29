@@ -21,6 +21,8 @@ public class Window extends Canvas {
 	
 	static JButton button2;
 	
+	public static int speed;
+	
 	static boolean value = false;
 	
 	public static int number;
@@ -45,7 +47,7 @@ public class Window extends Canvas {
 		button.addActionListener(new Action());
 		
 		number = subNumber();
-		
+				
 		button2 = new JButton("" + number);
 		button2.setSize(100,30);
 		button2.setBackground(Color.green);
@@ -78,15 +80,21 @@ public class Window extends Canvas {
 			panel.add(label3);
 		}
 	}
-	
+
 	public static class ActionTwo implements ActionListener {
 		
-		Ball ball;
+		Controller controller;
+		public static int speed = 0;
 		
+
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			System.out.println("True");
+			
+			speed = Window.number;
+		
 		}
+		
+
 	}
 	
 	public static int subNumber() {
@@ -99,5 +107,5 @@ public class Window extends Canvas {
 		
 		return number;
 	}
-	
+		
 }

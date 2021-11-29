@@ -9,12 +9,13 @@ import javax.swing.JOptionPane;
 public class Player extends CraneObject {
 	
 	Controller controller;
-	Ball ball;
 	
-	public Player(int x, int y, Type type, Controller controller, Ball ball) {
+	public Player(int x, int y, Type type, Controller controller) {
+		
 		super(x, y, type);
+		
 		this.controller = controller;
-		this.ball = ball;
+
 		speedX = 2;
 		
 	}
