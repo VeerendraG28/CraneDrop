@@ -1,2 +1,4 @@
 # CraneDrop
 My First Game 
+
+Welcome to CraneDrop. The goal for the user within this game is to release the ball with timing to it hits the moving target. What makes this game fun and addicting is the randomized set speeds that are shown at the start of the game inside the eject button, so the user would have to consider previous rounds and get a grasp of known speeds. Hitting the target presents a dialog box stating "You hit the target" while not hitting the target presents a dialog box stating "You missed the target" while closing the program after each attempt. The biggest challenge for me while working on this project has to be working on the JButton so it ejects properly with the proper stated speed when clicking the eject button rather than ejecting instantly at the start of the program. Please try out my first game! Good Luck!
