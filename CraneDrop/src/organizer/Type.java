@@ -4,5 +4,6 @@ public enum Type {
 	
 	Player(),
 	CraneStructure(),
+	BallImaginary(),
 	Ball();
 }
