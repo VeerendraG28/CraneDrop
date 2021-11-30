@@ -60,7 +60,7 @@ public class Ball extends CraneObject {
 		x += speedX;
 		y += speedY;
 		
-		if (y <= 0 || y >= Crane.HEIGHT - 60) {
+		if (y <= 0 || y >= Crane.HEIGHT - 30) {
 			JOptionPane.showMessageDialog(null, "You missed the target. Don't give up!", null, JOptionPane.INFORMATION_MESSAGE);
 			System.exit(0);
 		}

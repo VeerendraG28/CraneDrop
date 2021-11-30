@@ -48,11 +48,11 @@ public class Window extends Canvas {
 		
 		number = subNumber();
 				
-		button2 = new JButton("" + number);
-		button2.setSize(100,30);
+		button2 = new JButton("Speed: " + number);
+		button2.setSize(100,100);
 		button2.setBackground(Color.green);
 		button2.setVisible(true);
-		button2.setBounds(580, 0, 50, 45);
+		button2.setBounds(0, 28, 100, 35);
 		frame.add(button2);
 		button2.addActionListener(new ActionTwo());
 						
@@ -69,9 +69,9 @@ public class Window extends Canvas {
 		public void actionPerformed(ActionEvent e) {
 			JFrame frame2 = new JFrame("Clicked");
 			frame2.setVisible(true);
-			frame2.setSize(900,85);
+			frame2.setSize(900,110);
 			JLabel label = new JLabel("Welcome to CraneDrop!");
-			JLabel label2 = new JLabel("There on the top right of your screen, you will see a light green button which serves to display the speed of the ball which can range from 1-5.");
+			JLabel label2 = new JLabel("There on the top left of your screen, you will see a light green button which serves to display the speed of the ball which can range from 1-5.");
 			JLabel label3 = new JLabel("Your goal is to time the ball to hit the sliding target with the given speed and use the delayed time to have fun with different difficulties. Good Luck!");
 			JPanel panel = new JPanel();
 			frame2.add(panel);

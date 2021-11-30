@@ -21,7 +21,7 @@ public class Player extends CraneObject {
 	}
 	
 	public Rectangle getBounds() {
-		return new Rectangle(x, y, 40, 12);
+		return new Rectangle(x, y, 42, 12);
 	}
 
 	@Override
@@ -53,7 +53,7 @@ public class Player extends CraneObject {
 	@Override
 	public void render(Graphics graphic) {
 		graphic.setColor(Color.white);
-		graphic.fillRect(x, y, 40, 12);
+		graphic.fillRect(x, y, 42, 12);
 		
 	}
 
