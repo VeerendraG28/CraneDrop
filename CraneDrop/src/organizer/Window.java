@@ -71,8 +71,8 @@ public class Window extends Canvas {
 			frame2.setVisible(true);
 			frame2.setSize(900,85);
 			JLabel label = new JLabel("Welcome to CraneDrop!");
-			JLabel label2 = new JLabel("There on the top right of your screen, you will see a light green button which serves to eject the ball from the craned structure.");
-			JLabel label3 = new JLabel("Your goal is to time the ball to hit the sliding target with the given speed which can range from 1-5. Good Luck!");
+			JLabel label2 = new JLabel("There on the top right of your screen, you will see a light green button which serves to display the speed of the ball which can range from 1-5.");
+			JLabel label3 = new JLabel("Your goal is to time the ball to hit the sliding target with the given speed and use the delayed time to have fun with different difficulties. Good Luck!");
 			JPanel panel = new JPanel();
 			frame2.add(panel);
 			panel.add(label);
@@ -94,7 +94,6 @@ public class Window extends Canvas {
 		
 		}
 		
-
 	}
 	
 	public static int subNumber() {

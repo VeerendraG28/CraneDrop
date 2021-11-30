@@ -2,6 +2,7 @@ package organizer;
 
 import java.awt.Color;
 
+
 import java.awt.Graphics;
 import java.awt.Rectangle;
 import java.util.Random;
@@ -16,9 +17,29 @@ public class Ball extends CraneObject {
 		
 		super(x, y, type);
 		
-		System.out.println(Window.number);
-		speedY = Window.number;
-			
+		String delayedTime;
+		
+		delayedTime = JOptionPane.showInputDialog("Please time your ejection time to hit the target in seconds.");
+		
+		if (delayedTime == null) {
+			System.exit(0);
+			throw new IllegalArgumentException("Please input a valid delayedTime");
+		}
+		
+		try {
+			int timing = Integer.parseInt(delayedTime);
+			try {
+				Thread.sleep(timing * 1000);
+				speedY = Window.number; 
+			} catch (InterruptedException e) {
+				Thread.currentThread().interrupt();
+			}
+		}
+		catch (NumberFormatException e) {
+			System.exit(0);
+			throw new IllegalArgumentException("Please input a number in seconds");
+		}
+													 
 	}
 		
 	public int randomInteger() {
@@ -40,7 +61,7 @@ public class Ball extends CraneObject {
 		y += speedY;
 		
 		if (y <= 0 || y >= Crane.HEIGHT - 60) {
-			JOptionPane.showMessageDialog(null, "You missed the target", null, JOptionPane.INFORMATION_MESSAGE);
+			JOptionPane.showMessageDialog(null, "You missed the target. Don't give up!", null, JOptionPane.INFORMATION_MESSAGE);
 			System.exit(0);
 		}
 	

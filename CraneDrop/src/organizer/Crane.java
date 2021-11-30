@@ -27,11 +27,13 @@ public class Crane extends Canvas implements Runnable {
 		controller = new Controller();
 		
 		new Window(WIDTH, HEIGHT, "Welcome to CraneDrop!", this);
+				
+		controller.addObject(new CraneStructure(319, 0, Type.CraneStructure));
 		
-						
 		controller.addObject(new Player(311, 433, Type.Player, controller));
+
 		controller.addObject(new Ball(312, 33, Type.Ball));
-		controller.addObject(new CraneStructure(319, 0,Type.CraneStructure));
+		
 
 	}
 
@@ -77,7 +79,7 @@ public class Crane extends Canvas implements Runnable {
 			
 			if(System.currentTimeMillis() - timer > 1000) { //if the gap between the timer variable is less than 1000 milliseconds
 				timer += 1000; //add 1000 to timer
-				//System.out.println("FPS: " + frames); //gets the FPS of the game
+				System.out.println("FPS: " + frames); //gets the FPS of the game
 				frames = 0; //recalculate
 			}
 		}
