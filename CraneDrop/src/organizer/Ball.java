@@ -19,7 +19,7 @@ public class Ball extends CraneObject {
 		
 		String delayedTime;
 		
-		delayedTime = JOptionPane.showInputDialog("Please time your ejection time to hit the target in seconds.");
+		delayedTime = JOptionPane.showInputDialog("Please input your ejection time to hit the target in seconds.");
 		
 		if (delayedTime == null) {
 			System.exit(0);
